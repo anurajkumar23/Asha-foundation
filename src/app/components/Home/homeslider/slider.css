@@ -1,0 +1,18 @@
+
+.mySlider{
+    height: 615px;
+    z-index: 1;
+}
+
+@media (max-width:700px){
+    .mySlider{
+        height: 50vh;
+        
+    }
+}
+
+@media (max-width:400px){
+    .mySlider{
+        height: 43vh;
+    }
+}
