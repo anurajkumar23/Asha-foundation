@@ -3,14 +3,14 @@ import React from "react";
 
 export default function carprotection() {
   return (
-    <div className="md:pt-[120px]  flex-col" id="gallery">
+    <div className="md:pt-[120px]  pt-3 flex-col" id="gallery">
       <div className="flex-col text-center text-3xl font-semibold text-[#222222] w-[18rem] m-auto ">
         Our Gallery
        
       </div>
 
       <div className="p-5 md:p-10 ">
-        <div className="columns-1 xs:columns-2 lg:columns-3 xl:columns-4 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
+        <div className="columns-2 sm:columns-3 lg:columns-4 xl:columns-4 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
           <Image
             src={`/images/background-1.jpg`}
             alt="galery-01"
