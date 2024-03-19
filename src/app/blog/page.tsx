@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <div>
       <div className="">
-        <div className="relative mt-7">
+        <div className="relative ">
           <Image
             height={500}
             width={500}
