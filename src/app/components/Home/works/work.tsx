@@ -13,7 +13,7 @@ export default function work() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="grid mxs:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-20">
-          <div className="mx-auto">
+          <div className="mx-auto border-2 rounded-xl shadow-xl"> 
             <div className="flex justify-center">
               <Image
                 src={`/images/post-1.jpg`}
@@ -45,7 +45,7 @@ export default function work() {
 
             <Button text="Donate Now" />
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto border-2 rounded-xl shadow-xl">
             <div className="flex justify-center">
               <Image
                 src={`/images/post-1.jpg`}
@@ -77,7 +77,7 @@ export default function work() {
 
             <Button text="Donate Now" />
           </div>
-          <div className="mx-auto">
+          <div className="mx-auto border-2 rounded-xl shadow-xl">
             <div className="flex justify-center">
               <Image
                 src={`/images/post-1.jpg`}

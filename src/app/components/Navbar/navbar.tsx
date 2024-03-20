@@ -70,7 +70,7 @@ export default function Navbar() {
             <FaTwitter className="text-blue-400 w-7 h-7" />
             <FaWhatsapp className="text-green-500 w-7 h-7" />
           </div>
-          <div className='w-full flex justify-center'>
+          <div className='w-full flex justify-center pt-2'>
             <Link href="/">
             <Image width={500} height={500} alt="logo" src="/images/asha-logo.png" className='w-[80px] h-[80px]' />
             </Link>
