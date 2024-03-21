@@ -5,7 +5,11 @@ import React from "react";
 export default function Volunteer() {
   return (
     <div className="pt-[120px]">
-      <div className="font-bold text-3xl text-center">Become A Volunteer</div>
+      <div className="font-bold text-3xl text-center flex items-center justify-center mb-5 gap-x-2">
+      <div className="border-b-2 border-green-500 w-16"></div>
+        Become A Volunteer
+        <div className="border-b-2 border-green-500 w-16"></div>
+        </div>
       <div className="relative mt-7">
         <Image
           height={500}

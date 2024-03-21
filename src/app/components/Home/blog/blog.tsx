@@ -8,7 +8,11 @@ export default function blog() {
   return (
     <div className="pt-[45px]">
       <div className="text-center">
-        <p className="font-bold text-3xl">Our Blog</p>
+        <p className="font-bold text-3xl flex items-center justify-center mb-5 gap-x-2">
+        <span className="border-b-2 border-green-500 w-16"></span>
+          Our Blogs
+          <span className="border-b-2 border-green-500 w-16"></span>
+          </p>
         <p className=" md:px-[5%] px-[2%] mt-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
