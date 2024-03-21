@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/">
             <li className='text-center cursor-pointer hover:text-red-300'>Home</li>
           </Link>
-          <Link href="">
+          <Link href="/aboutus">
             <li className='text-center cursor-pointer hover:text-red-300'>About Us</li>
           </Link>
           <Link href="/blog">
@@ -53,7 +53,7 @@ export default function Navbar() {
             <Link href="/">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Home</li>
           </Link>
-          <Link href="">
+          <Link href="/aboutus">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>About Us</li>
           </Link>
           <Link href="/blog">
