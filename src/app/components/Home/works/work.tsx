@@ -7,13 +7,17 @@ export default function work() {
   return (
     <div className="pt-[120px]">
       <div className="text-center">
-        <p className="font-bold text-3xl">Featured Causes</p>
+      <div className="flex items-center justify-center mb-5 gap-x-2">
+      <div className="border-b-2 border-green-500 w-16"></div>
+          <p className="font-bold text-3xl">Campaigns</p>
+          <div className="border-b-2 border-green-500 w-16"></div>
+        </div>
         <p className=" md:px-[5%] px-[2%] mt-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="grid mxs:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-20">
-          <div className="mx-auto border-2 rounded-xl shadow-xl"> 
+          <div className="mx-auto border-2 rounded-xl shadow-xl pb-3"> 
             <div className="flex justify-center">
               <Image
                 src={`/images/post-1.jpg`}

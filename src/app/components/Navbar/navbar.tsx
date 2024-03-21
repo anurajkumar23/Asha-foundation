@@ -1,4 +1,5 @@
 "use client"
+import Button from '@/app/utils/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -21,22 +22,23 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <ul className="'ml-4 hidden md:flex text-xl lg:w-1/3 md:w-1/2 justify-between">
+        <ul className="'ml-4 hidden items-center md:flex text-xl lg:w-1/3 md:w-1/2 justify-between">
           <Link href="/">
-            <li className='text-center cursor-pointer hover:text-red-300'>Home</li>
+            <li className=' cursor-pointer hover:text-red-300'>Home</li>
           </Link>
           <Link href="/aboutus">
-            <li className='text-center cursor-pointer hover:text-red-300'>About Us</li>
+            <li className=' cursor-pointer hover:text-red-300'>About Us</li>
           </Link>
           <Link href="/blog">
-            <li className='text-center cursor-pointer hover:text-red-300'>Blog</li>
+            <li className=' cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
           <Link href="">
-            <li className='text-center cursor-pointer hover:text-red-300'>Donate</li>
+            <li className=' cursor-pointer hover:text-red-300'>
+            <Button text="Donate" /></li>
           </Link>
         </ul>
         <div className='flex items-center gap-x-3 '>
-          <div className=' border-2 rounded-sm px-3 py-2 hover:text-white cursor-pointer hover:bg-red-300'>Login</div>
+          <div className=' border-2 rounded-xl px-3 py-2 hover:text-white text-red-600 text-xl font-bold cursor-pointer hover:bg-red-300 hover:border-red-400'>Join us</div>
           <div onClick={handleNav} className='md:hidden cursor-pointer relative'>
             <AiOutlineMenu size={25} className='justify-end' />
           </div>
@@ -60,7 +62,8 @@ export default function Navbar() {
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
           <Link href="">
-            <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Donate</li>
+            <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>
+              <Button text="Donate" /></li>
           </Link>
             </ul>
           </div>
