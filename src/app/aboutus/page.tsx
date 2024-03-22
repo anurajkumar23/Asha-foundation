@@ -67,7 +67,7 @@ export default function page() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
             deleniti, ut culpa aspernatur incidunt eaque modi ipsam recusandae{" "}
           </p>
-          <div className="grid mxs:grid-cols-2 md:grid-cols-3 gap-4 mt-10 mx-5 md:mx-20 ">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 mx-5  md:mx-20 ">
             <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
               <Image
                 src={`/images/trustee.jpg`}
@@ -121,7 +121,7 @@ export default function page() {
               alt="trustee"
               width={500}
               height={500}
-              className="h-[30rem] w-[60rem] hover:scale-105 cursor-pointer duration-300 mx-auto"
+              className=" sm:h-[36rem] sm:w-[60rem] h-max-[36rem] w-max-[60rem] hover:scale-105 cursor-pointer duration-300 mx-auto"
               loading="lazy"
             />
           </div>
