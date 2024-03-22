@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link href="/blog">
             <li className=' cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
-          <Link href="">
+          <Link href="/donate">
             <li className=' cursor-pointer hover:text-red-300'>
             <Button text="Donate" /></li>
           </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
           <Link href="/blog">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
-          <Link href="">
+          <Link href="/donate">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Donate</li>
           </Link>
             </ul>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import DonateForm from './donateform'
 
 export default function page() {
   return (
@@ -30,8 +31,10 @@ export default function page() {
         <div className='text-semibold text-3xl text-center pt-[50px]'>
             <p className='mb-5'>DONATE AND PARTICIPATE WITH US</p>
             <hr className='mx-[30%] pt-5 '/>
+            <p>A Best way to help the humanity and save tax.😊</p>
 
         </div>
+        <DonateForm/>
       </div>
     </div>
   )
