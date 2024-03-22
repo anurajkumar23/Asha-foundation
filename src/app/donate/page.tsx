@@ -34,7 +34,7 @@ export default function page() {
             <p>A Best way to help the humanity and save tax.😊</p>
 
         </div>
-        <DonateForm/>
+        <DonateForm campings='All Campings'/>
       </div>
     </div>
   )

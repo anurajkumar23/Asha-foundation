@@ -13,8 +13,12 @@ interface FormData {
   city: string;
   amount: number;
 }
+interface Props {
+    campings: string;
+  }
+  
 
-export default function DonateForm(): JSX.Element {
+export default function DonateForm({ campings }: Props): JSX.Element {
   const [formData, setFormData] = useState<FormData>({
     citizenship: 'Indian',
     fullName: '',
@@ -40,15 +44,30 @@ export default function DonateForm(): JSX.Element {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(formData);
-    // Handle form submission here
-    // You can send this formData to your backend or perform any other actions
+    const updatedFormData = {
+        ...formData,
+        campings: campings 
+      };
+    console.log(updatedFormData);
+    
   };
 
   return (
     <div className=" mx-[5%] mt-8 p-6 bg-gray-100 rounded-lg">
       <h2 className="text-2xl font-bold mb-4 text-center ">Donate Form</h2>
       <form onSubmit={handleSubmit}>
+      <div className="mb-4">
+          <label className="block mb-2">
+            Campings:
+            <input
+              type="text"
+              name="campings"
+              value={campings}
+              readOnly
+              className="block w-full mt-1 p-2 border border-gray-300 rounded-md"
+            />
+          </label>
+        </div>
       <div className="mb-4">
           <label className="block mb-2">
             Donation Amount * :
