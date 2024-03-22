@@ -17,108 +17,110 @@ export default function work() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <div className="grid mxs:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-20">
-
-            <div className="flex justify-center">
-              <Image
-                src={`/images/post-1.jpg`}
-                alt="Donor"
-                width={500}
-                height={500}
-                className="h-[16rem] w-[22rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
-                loading="lazy"
-              />
-            </div>
-            <ProgressBar maxValue={100} value={50} />
-
-            <div className="flex justify-between px-2 mb-5">
-              <div>
-                Raised : <span className="text-[#5F646B]">5000</span>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-15 md:gap-5 lg:mx-20 lg:gap-10">
+          <Link href={"/campings/abc"}>
+            <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl pb-3">
+              <div className="flex justify-center">
+                <Image
+                  src={`/images/post-1.jpg`}
+                  alt="Donor"
+                  width={500}
+                  height={500}
+                  className=" sm:h-max-[16rem] sm:w-max-[22rem] md:h-[16rem] md:w-[22rem]  hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
+                  loading="lazy"
+                />
               </div>
-              <div>
-                Goal : <span className="text-[#5F646B]">8000</span>
-              </div>
-            </div>
-            <div className="font-bold text-xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              eos!
-            </div>
-            <div className="mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
+              <ProgressBar maxValue={100} value={50} />
 
-            <Link href={"/campings/abc"}>
+              <div className="flex justify-between px-2 mb-5">
+                <div>
+                  Raised : <span className="text-[#5F646B]">5000</span>
+                </div>
+                <div>
+                  Goal : <span className="text-[#5F646B]">8000</span>
+                </div>
+              </div>
+              <div className="font-bold text-xl mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                eos!
+              </div>
+              <div className="mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
               <Button text="Donate Now" />
-            </Link>
-          </div>
-          <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl">
-            <div className="flex justify-center">
-              <Image
-                src={`/images/post-1.jpg`}
-                alt="Donor"
-                width={500}
-                height={500}
-                className="h-[16rem] w-[22rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
-                loading="lazy"
-              />
             </div>
-            <ProgressBar maxValue={100} value={50} />
+          </Link>
+          <Link href={"/campings/abc"}>
+            <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl pb-3">
+              <div className="flex justify-center">
+                <Image
+                  src={`/images/post-1.jpg`}
+                  alt="Donor"
+                  width={500}
+                  height={500}
+                  className="sm:h-max-[16rem] sm:w-max-[22rem] md:h-[16rem] md:w-[22rem]  hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+              <ProgressBar maxValue={100} value={50} />
 
-            <div className="flex justify-between px-2 mb-5">
-              <div>
-                Raised : <span className="text-[#5F646B]">5000</span>
+              <div className="flex justify-between px-2 mb-5">
+                <div>
+                  Raised : <span className="text-[#5F646B]">5000</span>
+                </div>
+                <div>
+                  Goal : <span className="text-[#5F646B]">8000</span>
+                </div>
               </div>
-              <div>
-                Goal : <span className="text-[#5F646B]">8000</span>
+              <div className="font-bold text-xl mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                eos!
               </div>
-            </div>
-            <div className="font-bold text-xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              eos!
-            </div>
-            <div className="mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-            <Link href={"/campings/abc"}>
+              <div className="mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+
               <Button text="Donate Now" />
-            </Link>
-          </div>
-          <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl">
-            <div className="flex justify-center">
-              <Image
-                src={`/images/post-1.jpg`}
-                alt="Donor"
-                width={500}
-                height={500}
-                className="h-[16rem] w-[22rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
-                loading="lazy"
-              />
-            </div>
-            <ProgressBar maxValue={100} value={50} />
 
-            <div className="flex justify-between px-2 mb-5">
-              <div>
-                Raised : <span className="text-[#5F646B]">5000</span>
+            </div>
+          </Link>
+          <Link href={"/campings/abc"}>
+            <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl pb-3">
+              <div className="flex justify-center">
+                <Image
+                  src={`/images/post-1.jpg`}
+                  alt="Donor"
+                  width={500}
+                  height={500}
+                  className="sm:h-max-[16rem] sm:w-max-[22rem] md:h-[16rem] md:w-[22rem]  hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl"
+                  loading="lazy"
+                />
               </div>
-              <div>
-                Goal : <span className="text-[#5F646B]">8000</span>
-              </div>
-            </div>
-            <div className="font-bold text-xl mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              eos!
-            </div>
-            <div className="mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
+              <ProgressBar maxValue={100} value={50} />
 
-            <Link href={"/campings/abc"}>
+              <div className="flex justify-between px-2 mb-5">
+                <div>
+                  Raised : <span className="text-[#5F646B]">5000</span>
+                </div>
+                <div>
+                  Goal : <span className="text-[#5F646B]">8000</span>
+                </div>
+              </div>
+              <div className="font-bold text-xl mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+                eos!
+              </div>
+              <div className="mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+
               <Button text="Donate Now" />
-            </Link>
-          </div>
+
+            </div>
+          </Link>
         </div>
       </div>
     </div>

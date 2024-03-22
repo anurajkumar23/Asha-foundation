@@ -29,16 +29,16 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="pt-[50px] ">
+        <div className="pt-[50px] max-sm:mx-[2%]">
           <Image
             src={`/images/post-img.jpg`}
             alt="Donor"
             width={500}
             height={500}
-            className="h-[30rem] w-[55rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl mx-auto"
+            className="sm:h-[30rem] sm:w-[55rem] h-max-[30rem] w-max-[55rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl mx-auto"
             loading="lazy"
           />
-          <div className="mx-[20%]">
+          <div className="mx-[20%] max-sm:mx-[3%]">
             <ProgressBar maxValue={100} value={50} />
             <div className="flex justify-between px-2 mb-5">
               <div>
