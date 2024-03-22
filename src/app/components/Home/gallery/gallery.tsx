@@ -12,7 +12,7 @@ export default function carprotection() {
 
 
       <div className="p-5 md:p-10 ">
-        <div className="columns-2 sm:columns-3 lg:columns-4 xl:columns-4 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
+        <div className="cursor-pointer columns-2 sm:columns-3 lg:columns-4 xl:columns-4 gap-5 lg:gap-8 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
           <Image
             src={`/images/background-1.jpg`}
             alt="galery-01"
