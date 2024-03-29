@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GoPerson } from "react-icons/go";
-import { IoCalendarOutline } from "react-icons/io5";
-import ProgressBar from "@/app/utils/progressbar";
 
-export default function Page() {
+import ProgressBar from "@/app/utils/progressbar";
+import BlogPage from "./BlogPage";
+import getBlog from "@/action/get-blog";
+
+export default async function Page() {
+
+  const blog = await getBlog()
+
   return (
     <div className="">
       <div className="relative">
@@ -29,43 +33,8 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-8 lg:flex-row lg:justify-between mx-6">
-        <div className="flex flex-col justify-center text-center w-full lg:w-2/3 ">
-          <div className=" flex flex-col w-full pt-6 lg:space-y-0 lg:flex-row lg:items-center lg:justify-center">
-            <div className="max-lg:ml-0 max-lg:rounded-xl rounded-l-xl w-full lg:w-1/4 bg-green-500 text-white font-semibold ">
-              <div className="flex items-center justify-center mb-2 ">
-                <GoPerson className="mr-1" />
-                <p>Ishu Singh</p>
-              </div>
-              <div className="flex items-center justify-center mb-2 ">
-                <IoCalendarOutline className="mr-1" />
-                <p>19 March 2024</p>
-              </div>
-            </div>
-            <div className="cursor-pointer w-full lg:w-2/3 border-2 p-2 rounded-xl">
-              <div className="flex justify-center mb-2">
-                <Image
-                  src="/images/background-1.jpg"
-                  alt="Gallery Image"
-                  height={500}
-                  width={500}
-                  loading="lazy"
-                  className="h-max-[20rem] w-max-[38rem] hover:scale-105 cursor-pointer duration-300 mb-2 rounded-xl"
-                />
-              </div>
-              <Link href="#">
-                <p className="font-bold text-xl mb-2 text-gray-800 cursor-pointer hover:text-green-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, eos!
-                </p>
-              </Link>
-              <p className="mb-2 text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
 
+        <BlogPage data = {blog}/>
         <div className="w-full lg:w-1/3 mt-8 lg:mt-0 ">
           <div className="flex flex-col items-center justify-center">
             <p className="font-bold text-2xl mb-4 text-gray-800 lg:text-right">
@@ -83,7 +52,7 @@ export default function Page() {
                     className="w-24 h-16 rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                   />
                   <div className="flex flex-col">
-                    <Link href="#">
+                    <Link href="">
                       <p className="font-bold text-lg text-gray-800 cursor-pointer hover:text-green-400">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Maxime, eos!

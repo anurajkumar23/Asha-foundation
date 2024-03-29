@@ -46,7 +46,7 @@ const blog:React.FC<BlogProps> = ({
                 loading="lazy"
               />
             </div>
-            <Link href={`/blogs/${blogs.id}`}>
+            <Link href={`/blog/${blogs.id}`}>
             <div className="font-bold text-xl mb-2 hover:text-green-400 cursor-pointer">
              {blogs.heading}
             </div>
