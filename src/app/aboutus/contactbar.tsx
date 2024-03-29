@@ -1,31 +1,21 @@
 import Image from "next/image";
 import React from "react";
+import { AboutUs } from "../../../types";
 
-export default function contactbar() {
-  const data = [
-    {
-      name: "Call us at",
-      detail:
-        "+91 958xxxxxxx",
-    },
-    {
-      name: "Our Address",
-      detail:
-        "CarLight car washing center, Charkhari Rd, Rath Purab, Uttar Pradesh 210431",
-    },
-    {
-      name: "Working hours",
-      detail:
-        "Monday-Sunday: 7am - 7pm",
-    },
-    // {
-    //   name: "Polish and waxing",
-    //   detail:
-    //     "Car Lite provides you with the greatest polishing and waxing services available, making your car shine in any situation.",
-    // },
-  ];
+interface contactbarProps{
+  data: AboutUs
+}
+
+const contactbar:React.FC<contactbarProps> = ({
+data
+}) => {
+
   return (
-    <div className="grid mxs:grid-cols-2 md:grid-cols-3 gap-4 mt-5 mx-5 md:mx-20 pt-[50px]">
+    <>
+    {data.map((aboutUs) =>(
+    <div key={aboutUs.id} className="grid mxs:grid-cols-2 md:grid-cols-3 gap-4 mt-5 mx-5 md:mx-20 pt-[50px]">
+     
+        
       <div
         className="flex items-center justify-center mb-4 md:mb-0 flex-col "
 
@@ -39,8 +29,8 @@ export default function contactbar() {
           loading="lazy"
         />
 
-        <p className="font-semibold mt-2 uppercase"> {data[0].name}</p>
-        <p className="mt-2 p-4">{data[0].detail}</p>
+        <p className="font-semibold mt-2 uppercase"> Call us at</p>
+        <p className="mt-2 p-4">{aboutUs.phoneNo}</p>
       </div>
       <div
         className="flex items-center justify-center mb-4 md:mb-0 flex-col "
@@ -55,8 +45,8 @@ export default function contactbar() {
           loading="lazy"
         />
 
-        <p className="font-semibold mt-2 uppercase"> {data[1].name}</p>
-        <p className="mt-2 p-4">{data[1].detail}</p>
+        <p className="font-semibold mt-2 uppercase"> Our Address</p>
+        <p className="mt-2 p-4">{aboutUs.address}</p>
       </div>
       <div
         className="flex items-center justify-center mb-4 md:mb-0 flex-col "
@@ -72,9 +62,15 @@ export default function contactbar() {
           
         />
 
-        <p className="font-semibold mt-2 uppercase"> {data[2].name}</p>
-        <p className="mt-2 p-4">{data[2].detail}</p>
+        <p className="font-semibold mt-2 uppercase"> Working hours</p>
+        <p className="mt-2 p-4">Monday-Sunday: 7am - 7pm</p>
       </div>
+      
+      
     </div>
+    ))}
+    </>
   );
 }
+
+export default contactbar;

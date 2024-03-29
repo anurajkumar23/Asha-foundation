@@ -1,17 +1,3 @@
-// export interface Product {
-//   id: string;
-//   category: Category;
-//   name: string;
-//   price: string;
-//   discountedPrice: string;
-//   isFeatured: boolean;
-//   newArrivals:boolean;
-//   size: Size;
-//   color: Color;
-//   
-// };
-
-
 
 export interface Billboard {
   map(arg0: (item: any) => void): import("react").ReactNode;
@@ -54,3 +40,20 @@ export interface Image {
   id: string;
   url: string;
 }
+
+export interface AboutUs {
+  map(arg0: (aboutUs: any) => import("react").JSX.Element): import("react").ReactNode;
+  
+  id: string;
+  ourMembersUrl: String;
+  phoneNo:       String;
+  address:       String;
+};
+
+export interface Trustee {
+  map(arg0: (trustee: any) => import("react").JSX.Element): import("react").ReactNode;
+  id: string;
+  name:     String;
+  post:     String;
+  photoUrl: String;
+};

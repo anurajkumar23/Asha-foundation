@@ -3,8 +3,15 @@ import Link from "next/link";
 import React from "react";
 import Button from "../utils/button";
 import ContactBar from "./contactbar";
+import Trustees from "./Trustee";
+import getTrustee from "@/action/get-trustee";
+import getAboutUs from "@/action/get-aboutUs";
 
-export default function page() {
+export default async function page() {
+  
+  const trustee = await getTrustee()
+  const aboutUs = await getAboutUs()
+
   return (
     <div>
       <div className="">
@@ -57,75 +64,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="pt-[70px] text-center">
-          <p className="font-bold text-2xl text-[#072366] mb-5">
-            {" "}
-            BOARD OF TRUSTEES
-          </p>
-          <p className="text-lg">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-            deleniti, ut culpa aspernatur incidunt eaque modi ipsam recusandae{" "}
-          </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 mx-5  md:mx-20 ">
-            <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
-              <Image
-                src={`/images/trustee.jpg`}
-                alt="trustee"
-                width={500}
-                height={500}
-                className="h-[15rem] w-[17rem] hover:scale-105 cursor-pointer duration-300"
-                loading="lazy"
-              />
-              <p className="font-semibold text-2xl mt-3">MR. Mukesh Jha</p>
-              <p className="mt-3 text-green-500 text-xl mb-2">
-                Organisation Consultant
-              </p>
-            </div>
-            <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
-              <Image
-                src={`/images/trustee.jpg`}
-                alt="trustee"
-                width={500}
-                height={500}
-                className="h-[15rem] w-[17rem] hover:scale-105 cursor-pointer duration-300"
-                loading="lazy"
-              />
-              <p className="font-semibold text-2xl mt-3">MR. Mukesh Jha</p>
-              <p className="mt-3 text-green-500 text-xl mb-2">
-                Organisation Consultant
-              </p>
-            </div>
-            <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
-              <Image
-                src={`/images/trustee.jpg`}
-                alt="trustee"
-                width={500}
-                height={500}
-                className="h-[15rem] w-[17rem] hover:scale-105 cursor-pointer duration-300"
-                loading="lazy"
-              />
-              <p className="font-semibold text-2xl mt-3">MR. Mukesh Jha</p>
-              <p className="mt-3 text-green-500 text-xl mb-2">
-                Organisation Consultant
-              </p>
-            </div>
-          </div>
-          <div className="pt-[70px] text-center ">
-            <p className="font-bold text-2xl text-[#072366] mb-5">
-              {" "}
-              OUR MEMBERS
-            </p>
-            <Image
-              src={`/images/team.jpg`}
-              alt="trustee"
-              width={500}
-              height={500}
-              className=" sm:h-[36rem] sm:w-[60rem] h-max-[36rem] w-max-[60rem] hover:scale-105 cursor-pointer duration-300 mx-auto"
-              loading="lazy"
-            />
-          </div>
-        </div>
+       <Trustees data = {trustee} aboutUs = {aboutUs} />
 
         <div className="pt-[70px] relative">
           <div className="relative mt-7">
@@ -153,7 +92,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <ContactBar />
+        <ContactBar data={aboutUs}/>
       </div>
     </div>
   );
