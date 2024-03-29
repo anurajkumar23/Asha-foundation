@@ -3,8 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Blog } from "../../../../../types";
 
-export default function blog() {
+
+
+function formatDate(dateString: string | number | Date) {
+  const date = new Date(dateString);
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
+}
+
+interface BlogProps{
+data: Blog
+}
+
+
+const blog:React.FC<BlogProps> = ({
+  data
+}) => {
   return (
     <div className="pt-[45px]">
       <div className="text-center">
@@ -18,10 +34,11 @@ export default function blog() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-20">
-          <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl">
+          {data.map((blogs) =>(
+          <div key={blogs.id} className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl">
             <div className="flex justify-center">
               <Image
-                src={`/images/post-1.jpg`}
+                src={blogs.imageUrl}
                 alt="Donor"
                 width={500}
                 height={500}
@@ -29,21 +46,20 @@ export default function blog() {
                 loading="lazy"
               />
             </div>
-            <Link href="#">
+            <Link href={`/blogs/${blogs.id}`}>
             <div className="font-bold text-xl mb-2 hover:text-green-400 cursor-pointer">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              eos!
+             {blogs.heading}
             </div>
             </Link>
-            <div className="mb-2"> Created At : 18 March 2024 </div>
+            <div className="mb-2"> Created At : {formatDate(blogs.createdAt)} </div>
 
             <div className="mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              {blogs.descriptions}
             </div>
-
          
           </div>
+
+))}
           <div className=" cursor-pointer mx-auto border-2 rounded-xl shadow-xl">
             <div className="flex justify-center">
               <Image
@@ -104,3 +120,6 @@ export default function blog() {
     </div>
   );
 }
+
+
+export default blog;

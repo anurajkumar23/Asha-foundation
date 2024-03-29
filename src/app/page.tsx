@@ -5,17 +5,27 @@ import Work from "./components/Home/works/work";
 import Volunteer from "./components/Home/volunteer/volunteer";
 import Blog from "./components/Home/blog/blog";
 import Gallery from "./components/Home/gallery/gallery";
+import getBillboard from "@/action/get-billboard";
+import getCampaign from "@/action/get-campaign";
+import getBlog from "@/action/get-blog";
+import getGallery from "@/action/get-gallery";
 
-export default function Home() {
+export default async function Home () {
+ 
+  const billboard = await getBillboard()
+  const campaign = await getCampaign()
+  const blog = await getBlog()
+  const gallery = await getGallery()
+
   return (
   <div>
-   <Carousel />
+   <Carousel data ={billboard} />
    <Intro/>
    <Stats/>
-   <Work/>
+   <Work data = {campaign} />
    <Volunteer/>
-   <Gallery/>
-   <Blog/>
+   <Gallery data = {gallery} />
+   <Blog data = {blog} />
   </div>
   );
 }
