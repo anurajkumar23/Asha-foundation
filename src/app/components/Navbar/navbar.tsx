@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
-import JoinUsForm from '../joinus/page'
+import JoinUsForm from '../joinus/JoinUsForm'
 
 
 export default function Navbar() {
