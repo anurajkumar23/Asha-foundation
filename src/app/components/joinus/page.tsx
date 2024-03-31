@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-
+import { toast } from "react-hot-toast"
 interface JoinUsFormProps {
   onClose: () => void;
 }
@@ -37,19 +37,17 @@ const JoinUsForm: React.FC<JoinUsFormProps> = ({ onClose }) => {
         body: JSON.stringify(formData), // Send formData directly
       });
   
-      const data = await response.json(); // Await response.json() to parse JSON data
-  
-      console.log(data);
-  
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
-  
+    
       // Handle success, e.g., show success message
       console.log('Form submitted successfully');
+      toast.success('Form submitted successfully.');
       onClose();
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error('Error submitting form:');
       // Handle error, e.g., show error message to user
     }
   };
