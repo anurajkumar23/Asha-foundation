@@ -5,9 +5,20 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import JoinUsForm from '../joinus/page'
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
+  const handleJoinUsClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   const handleNav = () => {
     setMenuOpen(!menuOpen)
@@ -38,7 +49,8 @@ export default function Navbar() {
           </Link>
         </ul>
         <div className='flex items-center gap-x-3 '>
-          <div className=' border-2 rounded-xl px-3 py-2 hover:text-white text-red-600 text-xl font-bold cursor-pointer hover:bg-red-300 hover:border-red-400'>Join us</div>
+          <div className=' border-2 rounded-xl px-3 py-2 hover:text-white text-red-600 text-xl font-bold cursor-pointer hover:bg-red-300 hover:border-red-400' onClick={handleJoinUsClick} >Join us</div>
+          {showModal && <JoinUsForm onClose={handleCloseModal} />}
           <div onClick={handleNav} className='md:hidden cursor-pointer relative'>
             <AiOutlineMenu size={25} className='justify-end' />
           </div>

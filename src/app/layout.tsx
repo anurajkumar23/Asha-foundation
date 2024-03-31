@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/Footer/footer";
+import JoinUsPage from "./components/joinus/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,17 @@ export default function RootLayout({
         {children}
         </div>
         <Footer />
+        {/* <JoinUsPageOverlay /> */}
       </body>
     </html>
+  );
+}
+
+
+function JoinUsPageOverlay() {
+  return (
+    <div className="z-10">
+      <JoinUsPage />
+    </div>
   );
 }

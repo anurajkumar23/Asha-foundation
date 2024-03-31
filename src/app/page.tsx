@@ -9,6 +9,7 @@ import getBillboard from "@/action/get-billboard";
 import getCampaign from "@/action/get-campaign";
 import getBlog from "@/action/get-blog";
 import getGallery from "@/action/get-gallery";
+import JoinUsPage from "./components/joinus/page";
 
 export default async function Home () {
  
