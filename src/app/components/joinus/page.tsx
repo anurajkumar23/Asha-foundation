@@ -22,14 +22,37 @@ const JoinUsForm: React.FC<JoinUsFormProps> = ({ onClose }) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send data to server
-    console.log(formData);
-    // Close the form after submission
-    onClose();
+    
+    const URL = `${process.env.NEXT_PUBLIC_API_URL}/users`;
+  
+    try {
+      const response = await fetch(URL, {
+        method: 'POST',
+        mode: 'cors', // Ensure CORS mode is set to 'cors'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Send formData directly
+      });
+  
+      const data = await response.json(); // Await response.json() to parse JSON data
+  
+      console.log(data);
+  
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+  
+      // Handle success, e.g., show success message
+      console.log('Form submitted successfully');
+      onClose();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error, e.g., show error message to user
+    }
   };
-
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
       <div className="bg-white rounded-lg p-8 max-w-md w-full relative">
