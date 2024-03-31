@@ -38,7 +38,7 @@ export default function page() {
             className="sm:h-[30rem] sm:w-[55rem] h-max-[30rem] w-max-[55rem] hover:scale-105 cursor-pointer duration-300 mb-5 rounded-xl mx-auto"
             loading="lazy"
           />
-          <div className="mx-[20%] max-sm:mx-[3%]">
+          <div className="mx-[20%] max-sm:mx-[3%] ">
             <ProgressBar maxValue={100} value={50} />
             <div className="flex justify-between px-2 mb-5">
               <div>
@@ -49,7 +49,7 @@ export default function page() {
               </div>
             </div>
             <div className="font-bold text-xl mb-5">Women Education : Right  To Education</div>
-            <div className="mb-2">
+            <div className="mb-2  ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

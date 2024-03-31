@@ -81,13 +81,13 @@ export default async function page() {
                 <p className="text-white text-4xl font-semibold mb-5">
                   Help us so we can help others
                 </p>
-                <Button text="Donate Now" />
+                <Button text="Donate Now" goto="/donate" />
               </div>
               <div className="text-center">
                 <p className="text-white text-4xl font-semibold mb-5">
                   Become A volunteer To Help Others
                 </p>
-                <Button text="Join Us" />
+                <Button text="Join Us" goto="/donate"/>
               </div>
             </div>
           </div>

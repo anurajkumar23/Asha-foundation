@@ -45,7 +45,7 @@ export default function Navbar() {
           </Link>
           <Link href="/donate">
             <li className=' cursor-pointer hover:text-red-300'>
-            <Button text="Donate" /></li>
+            <Button text="Donate" goto="/donate" /></li>
           </Link>
         </ul>
         <div className='flex items-center gap-x-3 '>

@@ -20,7 +20,7 @@ export default function Volunteer() {
           className="object-cover w-full h-[400px]"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <Button text="Join Us Now" />
+          <Button text="Join Us Now" goto="/aboutus"/>
         </div>
       </div>
     </div>

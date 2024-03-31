@@ -4,6 +4,7 @@ import React from 'react'
 import { GoPerson } from "react-icons/go";
 import { IoCalendarOutline } from "react-icons/io5";
 import { Blog } from '../../../types';
+import Button from '../utils/button';
 
 
 interface BlogPageProps{
@@ -54,6 +55,7 @@ const BlogPage:React.FC<BlogPageProps> = ({
               <p className="mb-2 text-gray-600">
                {blogs.descriptions}
               </p>
+              <Button text="Read More" goto={`/:${blogs.id}`}/>
             </div>
           </div>
           ))}

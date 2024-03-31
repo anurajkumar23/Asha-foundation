@@ -20,7 +20,7 @@ export default function Intro() {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </div>
-            <Button text="Read More"/>
+            <Button text="Read More" goto="/aboutus" />
           </div>
         </div>
         <div className="md:w-1/2 md:text-center mt-5 md:mt-0">

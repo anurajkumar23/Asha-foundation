@@ -66,7 +66,7 @@ const Slider: React.FC<BillboardProps> = ({
               {item.label2}
             </p>
            <Link href={item.linkUrl}>
-            <Button text="Donate"/>
+            <Button text="Donate" goto="/donate" />
             </Link>
           </div>
           
@@ -89,7 +89,7 @@ const Slider: React.FC<BillboardProps> = ({
             Volunteer 
               
             </p>
-            <Button text="Volunteer"/>
+            <Button text="Volunteer" goto="/donate" />
           </div>
         </SwiperSlide>
         
