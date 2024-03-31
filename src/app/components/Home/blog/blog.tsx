@@ -9,7 +9,7 @@ import { Blog } from "../../../../../types";
 
 function formatDate(dateString: string | number | Date) {
   const date = new Date(dateString);
-  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
   return date.toLocaleDateString('en-US', options);
 }
 
