@@ -1,7 +1,9 @@
 "use client"
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { toast } from "react-hot-toast"
 
 interface FormData {
+  campings: string;
   citizenship: string;
   fullName: string;
   email: string;
@@ -12,14 +14,16 @@ interface FormData {
   state: string;
   city: string;
   amount: number;
+  isPaid: boolean;
 }
+
 interface Props {
-    campings: string;
-  }
-  
+  campings: string;
+}
 
 export default function DonateForm({ campings }: Props): JSX.Element {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
+    campaign: campings,
     citizenship: 'Indian',
     fullName: '',
     email: '',
@@ -42,21 +46,42 @@ export default function DonateForm({ campings }: Props): JSX.Element {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const updatedFormData = {
-        ...formData,
-        campings: campings 
-      };
-    console.log(updatedFormData);
-    
+
+    const URL = `${process.env.NEXT_PUBLIC_API_URL}/donations`;
+
+    try {
+      const response = await fetch(URL, {
+        method: 'POST',
+        mode: 'cors', // Ensure CORS mode is set to 'cors'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData), // Send formData directly
+      });
+
+      console.log(formData)
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      // Handle success, e.g., show success message
+      console.log('Form submitted successfully');
+      toast.success('Form submitted successfully.');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Error submitting form:');
+      // Handle error, e.g., show error message to user
+    }
   };
 
   return (
     <div className=" mx-[5%] mt-8 p-6 bg-gray-100 rounded-lg">
       <h2 className="text-2xl font-bold mb-4 text-center ">Donate Form</h2>
       <form onSubmit={handleSubmit}>
-      <div className="mb-4">
+        <div className="mb-4">
           <label className="block mb-2">
             Campings:
             <input
@@ -68,7 +93,7 @@ export default function DonateForm({ campings }: Props): JSX.Element {
             />
           </label>
         </div>
-      <div className="mb-4">
+        <div className="mb-4">
           <label className="block mb-2">
             Donation Amount * :
             <input
@@ -83,7 +108,7 @@ export default function DonateForm({ campings }: Props): JSX.Element {
         </div>
         <div className="mb-4">
           <label className="block mb-2">
-            Citizenship * : 
+            Citizenship * :
             <select
               name="citizenship"
               value={formData.citizenship}
@@ -206,7 +231,7 @@ export default function DonateForm({ campings }: Props): JSX.Element {
               onChange={handleInputChange}
               className="block w-full mt-1 p-2 border border-gray-300 rounded-md"
             />
- </label>
+          </label>
         </div>
         <button
           type="submit"

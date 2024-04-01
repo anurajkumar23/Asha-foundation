@@ -69,7 +69,7 @@ params
                         <div className="mb-5 mt-2">
                             Share : Facebook , instagram , telegram ,Whastapp
                         </div>
-                        <DonateForm campings="Women Education" />
+                        <DonateForm campings={campaigns.campaign} />
                     </div>
                 </div>
             </div>
