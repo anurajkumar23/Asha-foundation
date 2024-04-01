@@ -27,6 +27,7 @@ export interface Blog {
   heading:      String;
   descriptions: String;
   author:       String;
+  createdAt:    Date;
 };
 
 export interface Gallery {

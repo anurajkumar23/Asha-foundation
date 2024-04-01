@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Work from "@/app/components/Home/works/work";
-import getBlog from "@/action/get-blog";
 import getCampaign from "@/action/get-campaign";
+import getBlogs from "@/action/get-blogs";
+
 
 function formatDate(dateString: string | number | Date) {
   const date = new Date(dateString);
@@ -11,15 +12,24 @@ function formatDate(dateString: string | number | Date) {
   return date.toLocaleDateString('en-US', options);
 }
 
+interface BlogPageProps{
+  params: {
+    blogId: string;
+},
+}
 
-export default async function page() {
-  const blogs = await getBlog()
+
+const BlogPage: React.FC<BlogPageProps> = async ({
+  params
+}) => {
+  const blogs = await getBlogs(params.blogId);
   const campaign = await getCampaign()
+
+
 
   return (
     <div>
-      {blogs.map((blogs) => (
-      <div key={blogs.id}>
+      <div>
         <div className="relative ">
           <Image
             height={500}
@@ -42,11 +52,11 @@ export default async function page() {
         </div>
 
        
-        <div className="pt-[50px] text-center">
+        <div key={blogs.id} className="pt-[50px] text-center">
           <Image
             height={500}
             width={500}
-            src={blogs.imageUrl}
+            src={String(blogs.imageUrl)}
             alt="galery-01"
             className="mx-auto "
           />
@@ -66,7 +76,9 @@ export default async function page() {
         </div>
         <Work data = {campaign} />
       </div>
-      ))}
     </div>
   );
 }
+
+
+export default BlogPage;

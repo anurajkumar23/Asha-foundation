@@ -1,8 +1,19 @@
+"use client"
 import Button from "@/app/utils/button";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import JoinUsForm from "../../joinus/JoinUsForm";
 
 export default function Volunteer() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleJoinUsClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
   return (
     <div className="pt-[120px]">
       <div className="font-bold text-3xl text-center flex items-center justify-center mb-5 gap-x-2">
@@ -19,9 +30,11 @@ export default function Volunteer() {
           loading="lazy"
           className="object-cover w-full h-[400px]"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Button text="Join Us Now" goto="/aboutus"/>
+        <div onClick={handleJoinUsClick} className="absolute inset-0 flex items-center justify-center">
+          <Button text="Join Us Now" goto=""/>
+          
         </div>
+        {showModal && <JoinUsForm onClose={handleCloseModal} />}
       </div>
     </div>
   );

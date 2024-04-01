@@ -6,6 +6,7 @@ import ContactBar from "./contactbar";
 import Trustees from "./Trustee";
 import getTrustee from "@/action/get-trustee";
 import getAboutUs from "@/action/get-aboutUs";
+import AboutJoinUs from "./aboutJoinUs";
 
 export default async function page() {
   
@@ -83,12 +84,7 @@ export default async function page() {
                 </p>
                 <Button text="Donate Now" goto="/donate" />
               </div>
-              <div className="text-center">
-                <p className="text-white text-4xl font-semibold mb-5">
-                  Become A volunteer To Help Others
-                </p>
-                <Button text="Join Us" goto="/donate"/>
-              </div>
+              <AboutJoinUs />
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link href="/aboutus">
             <li className=' cursor-pointer hover:text-red-300'>About Us</li>
           </Link>
-          <Link href="/blog">
+          <Link href="/blogs">
             <li className=' cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
           <Link href="/donate">
@@ -70,7 +70,7 @@ export default function Navbar() {
           <Link href="/aboutus">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>About Us</li>
           </Link>
-          <Link href="/blog">
+          <Link href="/blogs">
             <li onClick={handleNav} className='py-4 text-center cursor-pointer hover:text-red-300'>Blog</li>
           </Link>
           <Link href="/donate">

@@ -6,7 +6,7 @@ import React from "react";
 import { Campaign } from "../../../../../types";
 
 interface CampaignProps {
-  data: Campaign;
+  data: Campaign[];
 }
 
 const work: React.FC<CampaignProps> = ({ data }) => {
@@ -24,7 +24,7 @@ const work: React.FC<CampaignProps> = ({ data }) => {
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-15 md:gap-5 lg:mx-20 lg:gap-10">
           {data.map((campaigns) => (
-            <Link href={`/campings/${campaigns.id}`} key={campaigns.id}>
+            <Link href={`/campaigns/${campaigns.id}`} key={campaigns.id}>
               <div className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl pb-3">
                 <div className="flex justify-center">
                   <Image
@@ -55,7 +55,7 @@ const work: React.FC<CampaignProps> = ({ data }) => {
                   </div>
                 </div>
                 <div className="font-bold text-xl mb-5">
-                  {campaigns.heading}
+                  {campaigns.campaign} : {campaigns.heading}
                 </div>
                 <div className="mb-2 h-[50px] box-border overflow-hidden mx-2">
                   {campaigns.descriptions}
