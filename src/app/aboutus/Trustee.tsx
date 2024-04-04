@@ -20,9 +20,7 @@ const Trustees: React.FC<TrusteeProps> = ({
                     BOARD OF TRUSTEES
                 </p>
                 <p className="text-lg">
-                    {" "}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                    deleniti, ut culpa aspernatur incidunt eaque modi ipsam recusandae{" "}
+                Meet the dedicated individuals guiding Asha Foundation with passion and purpose.
                 </p>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 mx-5  md:mx-20 ">
                     {data.map((trustee) => (
@@ -41,34 +39,7 @@ const Trustees: React.FC<TrusteeProps> = ({
                             </p>
                         </div>
                     ))}
-                    <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
-                        <Image
-                            src={`/images/trustee.jpg`}
-                            alt="trustee"
-                            width={500}
-                            height={500}
-                            className="h-[15rem] w-[17rem] hover:scale-105 cursor-pointer duration-300"
-                            loading="lazy"
-                        />
-                        <p className="font-semibold text-2xl mt-3">MR. Mukesh Jha</p>
-                        <p className="mt-3 text-green-500 text-xl mb-2">
-                            Organisation Consultant
-                        </p>
-                    </div>
-                    <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
-                        <Image
-                            src={`/images/trustee.jpg`}
-                            alt="trustee"
-                            width={500}
-                            height={500}
-                            className="h-[15rem] w-[17rem] hover:scale-105 cursor-pointer duration-300"
-                            loading="lazy"
-                        />
-                        <p className="font-semibold text-2xl mt-3">MR. Mukesh Jha</p>
-                        <p className="mt-3 text-green-500 text-xl mb-2">
-                            Organisation Consultant
-                        </p>
-                    </div>
+
                 </div>
                 <div className="pt-[70px] text-center ">
                     <p className="font-bold text-2xl text-[#072366] mb-5">

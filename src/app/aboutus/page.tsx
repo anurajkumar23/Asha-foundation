@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,7 +10,7 @@ import getAboutUs from "@/action/get-aboutUs";
 import AboutJoinUs from "./aboutJoinUs";
 
 export default async function page() {
-  
+
   const trustee = await getTrustee()
   const aboutUs = await getAboutUs()
 
@@ -54,18 +55,11 @@ export default async function page() {
 
           <div className="italic text-[#818181] ">
             <p className="text-2xl pb-5">The Vision </p>
-            CarLight Hand Wash is an eco-friendly, hand car wash and detailing
-            service based in INDIA. Our company was founded back in 2020 by a
-            team of experts with more then 10 years of professional car wash
-            experience. We operate three car washes throught INDIA area. Our
-            goal is to provide our customers with the friendliest, most
-            convenient hand car wash experience possible. We use the most modern
-            and up-to-date water reclamation modules as a part of our car wash
-            systems. Our products are all biodegradable and eco-friendly.
+            "The Vision" for our NGO encapsulates our profound commitment to fostering positive change, empowering communities, and creating a world where every individual has the opportunity to thrive. Through innovative initiatives and unwavering dedication, we aspire to build a society marked by equality, compassion, and sustainable development. Our vision transcends boundaries, inspiring hope and igniting transformational impact, as we envision a future where every dream finds wings and every heart finds solace.
           </div>
         </div>
 
-       <Trustees data = {trustee} aboutUs = {aboutUs} />
+        <Trustees data={trustee} aboutUs={aboutUs} />
 
         <div className="pt-[70px] relative">
           <div className="relative mt-7">
@@ -88,7 +82,7 @@ export default async function page() {
             </div>
           </div>
         </div>
-        <ContactBar data={aboutUs}/>
+        <ContactBar data={aboutUs} />
       </div>
     </div>
   );

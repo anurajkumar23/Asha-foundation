@@ -23,9 +23,10 @@ const BlogPage: React.FC<BlogPageProps> = ({
   data
 }) => {
   return (
-    <div className="flex flex-col justify-center text-center w-full lg:w-2/3 ">
+    <div className="flex flex-col justify-center items-center text-center w-full lg:w-2/3 ">
       {data.map((blogs) => (
-        <div key={blogs.id} className=" flex flex-col w-full pt-6 lg:space-y-0 lg:flex-row lg:items-center lg:justify-center">
+        <Link href={`/blogs/${blogs.id}`} key={blogs.id} >
+        <div  className=" flex flex-col w-full pt-6 lg:space-y-0 lg:flex-row lg:items-center lg:justify-center">
           <div className="max-lg:ml-0 max-lg:rounded-xl rounded-l-xl w-full lg:w-1/4 bg-green-500 text-white font-semibold ">
             <div className="flex items-center justify-center mb-2 ">
               <GoPerson className="mr-1" />
@@ -47,17 +48,18 @@ const BlogPage: React.FC<BlogPageProps> = ({
                 className="h-max-[20rem] w-max-[38rem] hover:scale-105 cursor-pointer duration-300 mb-2 rounded-xl"
               />
             </div>
-            <Link href={`/blogs/${blogs.id}`}>
+            
               <p className="font-bold text-xl mb-2 text-gray-800 cursor-pointer hover:text-green-400">
                 {blogs.heading}
               </p>
-            </Link>
+       
             <p className="mb-2 text-gray-600">
               {blogs.descriptions}
             </p>
             <Button text="Read More" goto={`/bogs/${blogs.id}`} />
           </div>
         </div>
+        </Link>
       ))}
     </div>
   )

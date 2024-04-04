@@ -29,8 +29,9 @@ const blog: React.FC<BlogProps> = ({ data }) => {
         <p className=" md:px-[5%] px-[2%] mt-5">Welcome To Our Blog</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 mx-5 md:mx-20">
           {data.map((blogs) => (
+            <Link href={`/blogs/${blogs.id}`} key={blogs.id}>
             <div
-              key={blogs.id}
+              
               className="cursor-pointer mx-auto border-2 rounded-xl shadow-xl"
             >
               <div className="flex justify-center">
@@ -43,11 +44,11 @@ const blog: React.FC<BlogProps> = ({ data }) => {
                   loading="lazy"
                 />
               </div>
-              <Link href={`/blogs/${blogs.id}`}>
+              
                 <div className="font-bold text-xl mb-2 hover:text-green-400 cursor-pointer">
                   {blogs.heading}
                 </div>
-              </Link>
+             
               <div className="mb-2">
                 {" "}
                 Created At : {formatDate(blogs.createdAt)}{" "}
@@ -57,6 +58,7 @@ const blog: React.FC<BlogProps> = ({ data }) => {
                 {blogs.descriptions}
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -11,7 +11,8 @@ export default function footer() {
         <div className="md:w-[30%] ">
           <p className="uppercase mb-[7%]">Our Mission</p>
           <p className="">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque natus ea repellendus vel at dolorem cumque veritatis quis ipsa! Quod ipsam perferendis placeat explicabo.
+          Driven by compassion, our NGO strives to uplift the disadvantaged through targeted and effective initiatives.
+We envision a world where every individual has access to essential resources and opportunities for a brighter future.
           </p>
           <div className="flex mt-5 mb-5">
             <RiFacebookLine className=" w-10 h-5 cursor-pointer" />
@@ -43,7 +44,8 @@ export default function footer() {
       </div>
       <hr className=" text-[#888F93] mb-5 pb-5 mx-[10%]"/>
       <div className="text-center text-[#888F93] pb-5">
-        Designed & Developed By <strong><Link href={`https://github.com/ishuoncode`}>Ishu Singh</Link></strong> © 2023. All rights reserved.
+      <p>Asha foundation © 2024. All rights reserved.</p> 
+        Designed & Developed By <strong>Meow corder</strong> 
       </div>
     </div>
   );

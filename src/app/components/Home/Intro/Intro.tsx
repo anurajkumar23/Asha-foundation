@@ -8,8 +8,7 @@ export default function Intro() {
         <div className="md:w-1/2 md:text-center">
           <div className="md:px-8">
             <p className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Welcome To Charity
-            </p>
+              Welcome To Asha Foundation            </p>
             <p className="mt-5 text-sm md:text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

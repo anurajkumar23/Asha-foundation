@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
+import Donar from "../../../../../public/images/volunteer.png"
+
 export default function stats() {
   return (
     <div>
@@ -43,7 +45,7 @@ export default function stats() {
         </div>
         <div className="rounded border-2 text-center flex flex-col justify-center items-center hover:border-green-500">
           <Image
-            src={`/Volunteer.svg`}
+            src={Donar}
             alt="Donor"
             width={500}
             height={500}
