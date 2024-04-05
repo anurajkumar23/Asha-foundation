@@ -55,8 +55,8 @@ export default async function Page() {
                       loading="lazy"
                       className="w-24 h-16 rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="flex flex-col">
 
+                    <div className="flex flex-col">
                       <p className="font-bold text-lg text-gray-800 cursor-pointer hover:text-green-400">
                         {campaigns.campaign} : {campaigns.heading}
                       </p>
