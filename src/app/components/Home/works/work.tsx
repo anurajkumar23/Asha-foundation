@@ -60,7 +60,7 @@ const work: React.FC<CampaignProps> = ({ data }) => {
                 <div className="mb-2 h-[50px] box-border overflow-hidden mx-2">
                   {campaigns.descriptions}
                 </div>
-                <Button text="Donate Now" goto={`/campings/:${campaigns.id}`} />
+                <Button text="Donate Now" goto={`/campaigns/${campaigns.id}`} />
               </div>
             </Link>
           ))}

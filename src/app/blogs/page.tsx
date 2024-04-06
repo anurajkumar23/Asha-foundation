@@ -27,8 +27,8 @@ export default async function Page() {
             <p className="text-white font-bold text-4xl">Blog Page</p>
             <br />
             <p className="text-white">
-              <Link href={"/"}>Home</Link>
-              <span className="text-green-300">Blog</span>
+              <Link href={"/"}>Home /</Link>
+              <span className="text-green-300"> Blog</span>
             </p>
           </div>
         </div>

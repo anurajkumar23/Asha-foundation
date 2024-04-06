@@ -49,9 +49,9 @@ const blog: React.FC<BlogProps> = ({ data }) => {
                   {blogs.heading}
                 </div>
              
-              <div className="mb-2">
+              <div className="mb-2 ">
                 {" "}
-                Created At : {formatDate(blogs.createdAt)}{" "}
+               <strong>Created At :</strong> <span className="text-red-500">{formatDate(blogs.createdAt)}{" "}</span>  
               </div>
 
               <div className="mb-2 h-[50px] box-border overflow-hidden mx-2">
