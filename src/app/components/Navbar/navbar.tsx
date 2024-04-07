@@ -25,11 +25,11 @@ export default function Navbar() {
   }
 
   return (
-    <nav>
-      <div className='flex fixed w-full flex-row px-5 z-20 bg-slate-100 shadow-xl items-center py-2 justify-between'>
-        <div>
+    <nav className=''>
+      <div className='flex fixed w-full flex-row px-5 z-20 bg-slate-100 shadow-xl items-center py-2 justify-between h-24'>
+        <div className=''>
         <Link href="/"> 
-          <Image width={500} height={500} alt="logo" src="/images/asha-logo.png" className='w-[80px] h-[80px]' />
+          <Image width={1000} height={300} alt="logo" src="/images/asha-logo.png" className='md:w-[280px] md:h-[70px] w-[220px] ' />
           </Link>
         </div>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
           </div>
           <div className='w-full flex justify-center pt-2'>
             <Link href="/">
-            <Image width={500} height={500} alt="logo" src="/images/asha-logo.png" className='w-[80px] h-[80px]' />
+            <Image width={500} height={500} alt="logo" src="/images/asha-logo.png" className='w-[250px] h-[50px]' />
             </Link>
           </div>
         </div>

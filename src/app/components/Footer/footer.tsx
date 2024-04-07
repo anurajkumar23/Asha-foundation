@@ -21,14 +21,14 @@ We envision a world where every individual has access to essential resources and
 
           <p>Phone: +958xxxxxxx</p>
         </div>
-        <div className="md:w-[50%]">
+        <div className="md:w-[50%] my-auto ">
           <Image
-            src="/images/asha-logo.png"
+            src="/images/asha-logo-1.png"
             width={1000}
             height={1000}
             loading="lazy"
             alt="logo"
-            className=" h-[10rem] w-[10rem] mx-auto"
+            className=" h-[4rem] w-[20rem] mx-auto my-auto"
           />
         </div>
         <div className="md:w-[20%] md:mb-[0]  mb-[7%]">
