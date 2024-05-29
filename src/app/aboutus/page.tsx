@@ -9,6 +9,17 @@ import getTrustee from "@/action/get-trustee";
 import getAboutUs from "@/action/get-aboutUs";
 import AboutJoinUs from "./aboutJoinUs";
 
+
+export const metadata = {
+  title: "About Us ",
+  description:
+    "Learn more about Asha Foundation, our mission, vision, and the various campaigns we run to support all types of needy people. Join us in making a difference.",
+  alternates: {
+    canonical: `/aboutus`,
+  },
+};
+
+
 export default async function page() {
 
   const trustee = await getTrustee()

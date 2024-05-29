@@ -6,6 +6,29 @@ import getCampaign from "@/action/get-campaign";
 import getBlogs from "@/action/get-blogs";
 
 
+export async function generateMetadata({ params }: { params: { blogId: string } }) {
+  const blogs = await getBlogs(params.blogId);
+
+  return {
+    title: `${blogs.heading}`,
+    description: blogs.descriptions.substring(0, 160),
+    alternates: {
+      canonical: `/blogs/${params.blogId}`,
+    },
+    openGraph: {
+      images: [
+        {
+          url: blogs.imageUrl,
+          width: 900,
+          height: 450,
+          alt: blogs.heading,
+        },
+      ],
+    },
+  };
+}
+
+
 function formatDate(dateString: string | number | Date) {
   const date = new Date(dateString);
   const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };

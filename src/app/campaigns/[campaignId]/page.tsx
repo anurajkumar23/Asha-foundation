@@ -6,6 +6,28 @@ import DonateForm from "@/app/donate/donateform";
 
 import getCampaigns from "@/action/get-campaigns";
 
+
+
+export async function generateMetadata({ params }: { params: { campaignId: string } }) {
+    const campaigns = await getCampaigns(params.campaignId);
+  
+    return {
+      title: `${campaigns.campaign}`,
+      description: campaigns.descriptions.substring(0, 160),
+      alternates: {
+        canonical: `/campaigns/${params.campaignId}`,
+      },
+      images: [
+        {
+          url: campaigns.imageUrl,
+          width: 900,
+          height: 450,
+          alt: campaigns.campaign,
+        },
+      ],
+    };
+  }
+
 interface CampaignPageProps {
     params: {
         campaignId: string;
@@ -13,7 +35,7 @@ interface CampaignPageProps {
 }
 
 const CampaignPage: React.FC<CampaignPageProps> = async ({
-params
+    params
 }) => {
 
     const campaigns = await getCampaigns(params.campaignId);
@@ -64,7 +86,7 @@ params
                         </div>
                         <div className="font-bold text-xl mb-5">{campaigns.campaign} : {campaigns.heading}</div>
                         <div className="mb-2  ">
-                           {campaigns.descriptions}
+                            {campaigns.descriptions}
                         </div>
                         <div className="mb-5 mt-2">
                             Share : Facebook , instagram , telegram ,Whastapp

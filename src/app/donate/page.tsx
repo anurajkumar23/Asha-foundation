@@ -3,6 +3,17 @@ import Link from 'next/link'
 import React from 'react'
 import DonateForm from './donateform'
 
+export const metadata = {
+  title: "Donate",
+  description:
+    "Contribute to Asha Foundation and help support various campaigns aimed at providing aid to those in need. Your donation can make a significant impact in the lives of many.",
+  alternates: {
+    canonical: `/donate`,
+  },
+};
+
+
+
 export default function page() {
   return (
     <div >

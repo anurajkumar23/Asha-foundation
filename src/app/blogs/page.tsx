@@ -6,6 +6,17 @@ import BlogPage from "./BlogPage";
 import getBlog from "@/action/get-blog";
 import getCampaign from "@/action/get-campaign";
 
+
+export const metadata = {
+  title: "Blog ",
+  description:
+    "Stay updated with the latest news, stories, and updates from Asha Foundation. Read inspiring stories and learn more about our campaigns supporting the needy.",
+  alternates: {
+    canonical: `/blogs`,
+  },
+};
+
+
 export default async function Page() {
 
   const blog = await getBlog()
